@@ -18,7 +18,9 @@ public class ContaCorrente {
         }
     }
     public void depositar(Double valor){
-        saldo += valor;
+        if(valor > 0){
+            saldo += valor;
+        }
     }
 
     private Double calcularLimite(){

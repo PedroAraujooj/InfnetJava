@@ -4,7 +4,6 @@ public class Cliente {
 
     private String nome;
     private Double salarioMensal = 0.0;
-
     private String cpf;
 
     public Cliente(String nome, String cpf) {
