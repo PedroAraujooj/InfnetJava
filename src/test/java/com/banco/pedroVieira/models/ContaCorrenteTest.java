@@ -1,5 +1,7 @@
 package com.banco.pedroVieira.models;
 
+import com.banco.pedroVieira.model.Cliente;
+import com.banco.pedroVieira.model.ContaCorrente;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

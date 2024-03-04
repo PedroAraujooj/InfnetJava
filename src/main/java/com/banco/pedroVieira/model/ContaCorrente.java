@@ -1,4 +1,4 @@
-package com.banco.pedroVieira.models;
+package com.banco.pedroVieira.model;
 
 public class ContaCorrente {
     public static final Double SALARIOMIN = 1412.0;

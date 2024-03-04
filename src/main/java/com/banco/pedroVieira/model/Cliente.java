@@ -1,4 +1,4 @@
-package com.banco.pedroVieira.models;
+package com.banco.pedroVieira.model;
 
 public class Cliente {
 
