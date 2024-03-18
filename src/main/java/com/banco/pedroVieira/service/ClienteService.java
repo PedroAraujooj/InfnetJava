@@ -12,13 +12,18 @@ import java.util.Map;
 public class ClienteService {
     private static Map<String, Cliente> clientes = new HashMap<>();
 
-    public void cadastrarCliente(String nome, String cpf, Double salario){
+    public Cliente cadastrarCliente(String nome, String cpf, Double salario){
         clientes.put(cpf,new Cliente(nome, cpf, salario));
+        return clientes.get(cpf);
     }
 
     public Cliente cadastrarCliente(String cpf){
         clientes.put(cpf, new Cliente(cpf));
         return clientes.get(cpf);
+    }
+    public Cliente cadastrarCliente(Cliente cliente){
+        clientes.put(cliente.getCpf(), cliente);
+        return cliente;
     }
     public Cliente getCliente( String cpf){
         return clientes.get(cpf);
