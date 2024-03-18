@@ -15,8 +15,17 @@ public class ClienteService {
     public void cadastrarCliente(String nome, String cpf, Double salario){
         clientes.put(cpf,new Cliente(nome, cpf, salario));
     }
-    public void getCliente( String cpf){
-        clientes.get(cpf);
+
+    public Cliente cadastrarCliente(String cpf){
+        clientes.put(cpf, new Cliente(cpf));
+        return clientes.get(cpf);
+    }
+    public Cliente getCliente( String cpf){
+        return clientes.get(cpf);
+    }
+
+    public void deleteCliente(String cpf){
+        clientes.remove(cpf);
     }
 
 

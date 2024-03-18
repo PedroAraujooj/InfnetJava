@@ -11,8 +11,15 @@ import java.util.Map;
 public class ContaCorrenteService {
     private static Map<Integer, ContaCorrente> contas = new HashMap();
 
-    public void cadastrarConta(Cliente cliente, Integer num){
+    public ContaCorrente cadastrarConta(Cliente cliente, Integer num){
         contas.put(num, new ContaCorrente(cliente, num));
+        return contas.get(num);
+    }
+    public ContaCorrente getConta(Integer num){
+        return contas.get(num);
+    }
+    public ContaCorrente deleteConta(Integer num){
+        return contas.remove(num);
     }
     public void fazerTransferencia(ContaCorrente cedende, ContaCorrente recebedor, Double valor){
         cedende.sacar(valor);

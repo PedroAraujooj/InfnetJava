@@ -6,6 +6,8 @@ public class Cliente {
     private Double salarioMensal = 0.0;
     private String cpf;
 
+    private Endereco endereco;
+
     public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
@@ -16,6 +18,10 @@ public class Cliente {
         this.salarioMensal = salarioMensal;
         this.cpf = cpf;
     }
+    public Cliente(String cpf) {
+        this.cpf = cpf;
+    }
+
 
     public String getNome() {
         return nome;
@@ -31,5 +37,12 @@ public class Cliente {
 
     public String getCpf() {
         return cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }
